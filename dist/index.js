@@ -1,5 +1,3 @@
-console.log(document.body);
-
 document.body.addEventListener('load', fetchBookmarks());
 
 // listen for form submit
@@ -61,11 +59,12 @@ function fetchBookmarks() {
   const bookmarksResults = document.querySelector('#bookmarks-results');
   // create output
   bookmarksResults.innerHTML = '';
-  for(let i = 0; i < bookmarks.length; i++) {
-    const siteName = bookmarks[i].name;
-    const siteUrl = bookmarks[i].url;
-    //bild output
-    bookmarksResults.innerHTML += `
+  if(bookmarks) {
+    for (let i = 0; i < bookmarks.length; i++) {
+      const siteName = bookmarks[i].name;
+      const siteUrl = bookmarks[i].url;
+      //bild output
+      bookmarksResults.innerHTML += `
       <div class="bookmarks-results__item">
         <h3 class="bookmarks-results__heading">${siteName}
           <a href="${siteUrl}" class="bookmarks-results__link bookmarks-results__link--forward" target="_blank">Перейти</a>
@@ -73,6 +72,7 @@ function fetchBookmarks() {
         </h3>
       </div>  
     `
+    }
   }
 }
 
