@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Букмаркер</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,700&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Букмаркер</h1>
+      <h2 class="heading heading--secondary">Добавьте в закладки свои любимые сайты</h2>
+      <form id="bookmarks-form">
+        <fieldset class="input-set">
+          <label>Название сайта</label>
+          <input type="text" id="site-name" placeholder="Название вебсайта">
+        </fieldset>
+        <fieldset class="input-set">
+          <label>URL сайта</label>
+          <input type="text" id="site-url" placeholder="URL вебсайта. Вводить http:// или https:// не нужно">
+        </fieldset>
+        <input class="submit" type="submit" value="Добавить сайт">
+      </form>
+      <hr>
+      <div id="bookmarks-results"></div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2018, Букмаркер, сделано на чистых HTML, CSS и JavaScript</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

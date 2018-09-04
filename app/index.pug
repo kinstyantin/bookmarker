@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Букмаркер
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700&amp;subset=cyrillic')
+    link(rel='stylesheet' href='index.css')
+  body
+    div(class='container')
+      h1(class='heading').
+        Букмаркер
+      h2(class='heading heading--secondary').
+        Добавьте в закладки свои любимые сайты
+      form(id='bookmarks-form')
+        fieldset(class='input-set')
+          label.
+            Название сайта
+          input(type='text' id='site-name' placeholder='Название вебсайта')
+        fieldset(class='input-set')
+          label.
+            URL сайта
+          input(type='text' id='site-url' placeholder='URL вебсайта. Вводить http:// или https:// не нужно')
+        input(type='submit'  class='submit' value='Добавить сайт')
+      hr
+      div(id='bookmarks-results')
+    div(class='footer')
+      p.
+        &copy; 2018, Букмаркер, сделано на чистых HTML, CSS и JavaScript
+    script(src='index.js')

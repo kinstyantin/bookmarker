@@ -1,0 +1,11 @@
+{
+  "name": "bookmarker",
+  "version": "1.0.0",
+  "description": "bookmarker app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pug -w app/index.pug -o dist/ -P | stylus -w app/index.styl -o dist/index.css"
+  },
+  "author": "Kostya Rubinsky",
+  "license": "ISC"
+}
